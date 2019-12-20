@@ -25,33 +25,63 @@
             bottom: 0;
             left: 0;
             opacity: 0.55;
+
+
         }
         body:after{
             background-image: linear-gradient(45deg, #1199c4, #B10DC9);
+            height: 100vh;
         }
         [class^="img-flex-"] {
 
 	        display: flex;
-	        -webkit-justify-content: space-between;
-	        justify-content: space-between;
+	        justify-content: center;
             text-align: center;
+            
         }
         .img-flex-3 img {
             z-index: 1;
-            width: 40%;
+            width: 30%;
             position: relative;
-            top: 200%;
+            top: 48vh;
             text-align: center;
+            opacity: 0.95;
+           
         }
+
+        .img-flex-3 img {
+            display: block;
+            margin: 0 auto;
+            animation: anime1 3s ease;
+            position: relative;
+            
+        }
+        
+        
+        @keyframes anime1 {
+            0%{
+                opacity: 0;
+
+            }
+            80%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.95;
+
+            }
+        }
+
+        
 
         
     </style>
 </head>
 <body>
     <div class="img-flex-3">
-        <a href="https://t.co/Hy2anskd5t?amp=1"><img src="img/steam_icon.png"></a>
-        <a href="https://twitter.com/yoko_emon"><img src="img/twitter_icon.png"></a>
-        <a href="https://www.twitch.tv/yokoemon"><img src="img/twitch_icon.png"></a>
+        <a class="steam" href="https://t.co/Hy2anskd5t?amp=1" target="_blank" title="Steam"><img src="img/steam_icon.png"></a>
+        <a class="twitter" href="https://twitter.com/yoko_emon" target="_blank" title="Twitter"><img src="img/twitter_icon.png"></a>
+        <a class="twitch" href="https://www.twitch.tv/yokoemon" target="_blank" title="Twitch"><img src="img/twitch_icon.png"></a>
 
     </div>
 </body>
