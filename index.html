@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title>うんち！</title>
-    <style>
-        body {
-            background-image: url(img/background.jpg); 
-            
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center center;
-            
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        body:after{
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0.55;
+    <head>
+        <meta charset="utf-8">
+        <title>information</title>
+        <style>
+            @media screen and (max-width: 600px) {
+            body{
+                background: linear-gradient(to top,rgba(25,153,196,0.7) 0%, rgba(177,13,201,0.7)100%),url(img/background.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .iconP{
+                width: 100%;
+                height: 98vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .icons{
+
+                display: flex;
+                flex-wrap: nowrap;
+                margin:0 auto;
+                justify-content: center;
+                align-items: center;
 
 
-        }
-        body:after{
-            background-image: linear-gradient(45deg, #1199c4, #B10DC9);
-            height: 100vh;
-        }
-        [class^="img-flex-"] {
-
-	        display: flex;
-	        justify-content: center;
-            text-align: center;
             
-        }
-        .img-flex-3 img {
-            z-index: 1;
-            width: 30%;
-            position: relative;
-            top: 48vh;
-            text-align: center;
-            opacity: 0.95;
-           
-        }
-
-        .img-flex-3 img {
-            display: block;
-            margin: 0 auto;
-            animation: anime1 3s ease;
-            position: relative;
-            
-        }
-        
-        
-        @keyframes anime1 {
-            0%{
-                opacity: 0;
+            }
+            .icon1{
+                height: 150px;
+                margin: 0 8vw;
 
             }
-            80%{
+            
+            .icon2{
+                height: 150px;
+                margin: 0 8vw;
+
+            }
+            .icon3{
+                height: 150px;
+                margin: 0 8vw;
+
+            }
+
+            a img {
                 opacity: 1;
+                -webkit-transition: .3s ease-in-out;
+                opacity: 0.8;
+                transition: .3s ease-in-out;
+                filter: contrast(150%);
             }
-            100%{
-                opacity: 0.95;
+            a:hover img {
+                opacity: 0.5;
+            }
+            }
+            @media screen and (min-width: 599px) {
+                body{
+                background: linear-gradient(to top,rgba(25,153,196,0.7) 0%, rgba(177,13,201,0.7)100%),url(img/background.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .iconP{
+                width: 100%;
+                height: 98vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .icons{
+
+                display: flex;
+
+                justify-content: space-between;
+  
+                flex-direction: column                
+            }
+            .icon1{
+                height: 100px;
+                margin: 8vh 0;
 
             }
-        }
+            
+            .icon2{
+                height: 100px;
+                margin: 8vh 0;
 
-        
+            }
+            .icon3{
+                height: 100px;
+                margin: 8vh 0;
 
-        
-    </style>
-</head>
-<body>
-    <div class="img-flex-3">
-        <a class="steam" href="https://t.co/Hy2anskd5t?amp=1" target="_blank" title="Steam"><img src="img/steam_icon.png"></a>
-        <a class="twitter" href="https://twitter.com/yoko_emon" target="_blank" title="Twitter"><img src="img/twitter_icon.png"></a>
-        <a class="twitch" href="https://www.twitch.tv/yokoemon" target="_blank" title="Twitch"><img src="img/twitch_icon.png"></a>
+            }
 
-    </div>
-</body>
+            a img {
+                opacity: 1;
+                -webkit-transition: .3s ease-in-out;
+                opacity: 0.8;
+                transition: .3s ease-in-out;
+                filter: contrast(150%);
+            }
+            a:hover img {
+                opacity: 0.5;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="iconP">
+            <div class="icons">
+                <a  href="https://steamcommunity.com/id/yokoemon99/" target="_blank" title="Steam"><img src="img/steam_icon.png" class="icon1"></a>
+                <a  href="https://twitter.com/yoko_emon" target="_blank" title="Twitter"><img src="img/twitter_icon.png" class="icon2"></a>
+                <a  href="https://www.twitch.tv/yokoemon" target="_blank" title="Twitch"><img src="img/twitch_icon.png" class="icon3"></a>    
+            </div>
+        </div>
+    </body>
 </html>
