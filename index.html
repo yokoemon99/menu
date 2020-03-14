@@ -2,9 +2,10 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>information</title>
         <style>
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 8000px) {
             body{
                 background: linear-gradient(to top,rgba(25,153,196,0.7) 0%, rgba(177,13,201,0.7)100%),url(img/background.jpg);
                 background-repeat: no-repeat;
@@ -58,8 +59,53 @@
             a:hover img {
                 opacity: 0.5;
             }
+            .steam{
+                animation-name: moved1;
+                animation-duration: 2s;
             }
-            @media screen and (min-width: 599px) {
+            @keyframes moved1 {
+                from {
+                    opacity: 0;
+                    transform: translateX(50%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+            }
+            .twitch{
+                animation-name: moved2;
+                animation-duration: 2s;
+            }
+            @keyframes moved2 {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+            }
+            .twitter{
+                animation-name: moved3;
+                animation-duration: 2s;
+            }
+            @keyframes moved3 {
+                from {
+                    opacity: 0;
+
+                }
+                to {
+                    opacity: 1;
+
+                }
+
+            }
+            }            
+            @media screen and (max-width: 500px) {
                 body{
                 background: linear-gradient(to top,rgba(25,153,196,0.7) 0%, rgba(177,13,201,0.7)100%),url(img/background.jpg);
                 background-repeat: no-repeat;
@@ -110,15 +156,60 @@
             a:hover img {
                 opacity: 0.5;
             }
+            .steam{
+                animation-name: moved1;
+                animation-duration: 2s;
+            }
+            @keyframes moved1 {
+                from {
+                    opacity: 0;
+                    transform: translateY(50%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+            .twitch{
+                animation-name: moved2;
+                animation-duration: 2s;
+            }
+            @keyframes moved2 {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+            .twitter{
+                animation-name: moved3;
+                animation-duration: 2s;
+            }
+            @keyframes moved3 {
+                from {
+                    opacity: 0;
+
+                }
+                to {
+                    opacity: 1;
+
+                }
+
+            }       
             }
         </style>
     </head>
     <body>
         <div class="iconP">
             <div class="icons">
-                <a  href="https://steamcommunity.com/id/yokoemon99/" target="_blank" title="Steam"><img src="img/steam_icon.png" class="icon1"></a>
-                <a  href="https://twitter.com/yoko_emon" target="_blank" title="Twitter"><img src="img/twitter_icon.png" class="icon2"></a>
-                <a  href="https://www.twitch.tv/yokoemon" target="_blank" title="Twitch"><img src="img/twitch_icon.png" class="icon3"></a>    
+                <a  class="steam" href="https://steamcommunity.com/id/yokoemon99/" target="_blank" title="Steam"><img src="img/steam_icon.png" class="icon1"></a>
+                <a  class="twitter" href="https://twitter.com/yoko_emon" target="_blank" title="Twitter"><img src="img/twitter_icon.png" class="icon2"></a>
+                <a  class="twitch" href="https://www.twitch.tv/yokoemon" target="_blank" title="Twitch"><img src="img/twitch_icon.png" class="icon3"></a>    
             </div>
         </div>
     </body>
