@@ -4,6 +4,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>information</title>
+
+        <script type="text/javascript">
+        function sleep(waitSec, callbackFunc) {
+ 
+            // 経過時間（秒）
+            var spanedSec = 0;
+
+            // 1秒間隔で無名関数を実行
+            var id = setInterval(function () {
+
+                spanedSec++;
+
+                // 経過時間 >= 待機時間の場合、待機終了。
+                if (spanedSec >= waitSec) {
+
+                    // タイマー停止
+                    clearInterval(id);
+
+                    // 完了時、コールバック関数を実行
+                    if (callbackFunc) callbackFunc();
+                }
+            }, 1000);
+
+        }
+
+        function omikuji() {
+            alert('うんち占いを始めます');
+                sleep(3,function(){
+                    alert('出ました！')
+	                rand = Math.floor(Math.random()*5);
+	                if (rand == 0) msg = "大吉";
+	                if (rand == 1) msg = "中吉";
+	                if (rand == 2) msg = "吉";
+	                if (rand == 3) msg = "凶";
+	                if (rand == 4) msg = "大凶";
+	                alert(msg);
+                });
+        }
+        </script>
         <style>
             @media screen and (max-width: 8000px) {
             body{
@@ -12,6 +51,8 @@
                 background-position: center center;
                 background-size: cover;
                 background-attachment: fixed;
+                margin: 0;
+                padding: 0;
             }
 
             .iconP{
@@ -48,7 +89,26 @@
                 margin: 0 8vw;
 
             }
-
+            .homeicon{
+                position: absolute;
+                bottom: 0px;
+                flex-direction: row;
+                float: left;
+                width: 100px;
+            }
+            .icon4{
+                height: 75px;
+                width: 75px;
+                margin: 0;
+            }
+            .icon5{
+                width: 75px;
+            }
+            .unti{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
             a img {
                 opacity: 1;
                 -webkit-transition: .3s ease-in-out;
@@ -63,6 +123,8 @@
                 animation-name: moved1;
                 animation-duration: 2s;
             }
+
+
             @keyframes moved1 {
                 from {
                     opacity: 0;
@@ -92,7 +154,6 @@
             .twitter{
                 animation-name: moved3;
                 animation-duration: 2s;
-                z-index: 1;
             }
             @keyframes moved3 {
                 from {
@@ -146,7 +207,26 @@
                 margin: 8vh 0;
 
             }
-
+            .icon4{
+                height: 50px;
+                width: 50px;
+                margin: 0;
+            }
+            .homeicon{
+                position: absolute;
+                bottom: 0px;
+                flex-direction: row;
+                float: left;
+                width: 50px;
+            }
+            .icon5{
+                width: 50px;
+            }
+            .unti{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
             a img {
                 opacity: 1;
                 -webkit-transition: .3s ease-in-out;
@@ -190,7 +270,6 @@
             .twitter{
                 animation-name: moved3;
                 animation-duration: 2s;
-                z-index: 1;
             }
             @keyframes moved3 {
                 from {
@@ -214,5 +293,12 @@
                 <a  class="twitch" href="https://www.twitch.tv/yokoemon" target="_blank" title="Twitch"><img src="img/twitch_icon.png" class="icon3"></a>    
             </div>
         </div>
+        <div class="homeicon">
+            <a href="https://yokoemon.mydns.jp/" title="yokoemon.mydns.jp"><img src="img/home.png" class="icon4"></a>     
+        </div>
+        <div class=unti>
+            <a><img src="img/unti.png" class="icon5" onclick="omikuji()"></a>
+        </div>
+
     </body>
 </html>
